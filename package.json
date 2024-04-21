@@ -1,6 +1,6 @@
 {
-	"name": "prisma-class-generator",
-	"version": "0.2.9",
+	"name": "@finanzappco/prisma-class-generator",
+	"version": "0.3.0",
 	"description": "Class generator from Prisma schema",
 	"main": "dist/index.js",
 	"license": "MIT",
@@ -10,10 +10,9 @@
 		"typescript",
 		"generator"
 	],
-	"homepage": "https://github.com/kimjbstar/prisma-class-generator",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/kimjbstar/prisma-class-generator.git"
+		"url": "git://github.com/FinanzAppCo/prisma-class-generator.git"
 	},
 	"scripts": {
 		"format": "prettier --write \"src/**/*.ts\"",
@@ -28,10 +27,7 @@
 	"engines": {
 		"node": ">=14"
 	},
-	"author": {
-		"name": "kimjbstar",
-		"email": "kimjbstar@gmail.com"
-	},
+	"author": "FinanzAppCo",
 	"dependencies": {
 		"@prisma/client": "^5.5.2",
 		"@prisma/generator-helper": "^5.5.2",
