@@ -1,3 +1,4 @@
+import { snakeCase } from 'change-case'
 import { DMMF } from '@prisma/generator-helper'
 import { ClassComponent } from './components/class.component'
 import { DecoratorComponent } from './components/decorator.component'
@@ -225,7 +226,10 @@ export class PrismaConvertor {
 						model.name !== field.type &&
 						!field.relationName,
 				)
-				.map((v) => v.type),
+				.map((v) => ({
+					import: snakeCase(v.type),
+					name: v.type,
+				})),
 		)
 
 		const enums = model.fields.filter((field) => field.kind === 'enum')

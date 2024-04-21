@@ -17,17 +17,17 @@ generator prismaClassGenerator {
 }
 
 model Dealer {
-  id         String    @id @default(auto()) @map("_id") @db.ObjectId
-  createdAt  DateTime? @default(now())
-  modifiedAt DateTime  @updatedAt
+  id         String      @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt  DateTime?   @default(now())
+  modifiedAt DateTime    @updatedAt
   name       String
-  slug       String    @unique
-  address    Address
+  slug       String      @unique
+  address    AddressType
 
   @@map("dealers")
 }
 
-type Address {
+type AddressType {
   city         String
   postalCode   String
   street       String
