@@ -10,8 +10,8 @@ export class ClassComponent extends BaseComponent implements Echoable {
 	enumTypes?: string[] = []
 	extra?: string = ''
 	types?: {
-		import: string;
-		name: string;
+		import: string
+		name: string
 	}[]
 
 	echo = () => {

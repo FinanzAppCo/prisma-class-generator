@@ -18,6 +18,7 @@
 		"access": "public"
 	},
 	"scripts": {
+		"build": "tsc --skipLibCheck",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"dev": "node -r ts-node/register src/index.ts",
 		"generate:postgresql": "prisma generate --schema prisma/postgresql.prisma",

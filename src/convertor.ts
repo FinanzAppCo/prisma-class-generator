@@ -213,7 +213,11 @@ export class PrismaConvertor {
 		const relationTypes = uniquify(
 			model.fields
 				.filter(
-					(field) => field.relationName && (this._config.separateRelationFields ? true : model.name !== field.type),
+					(field) =>
+						field.relationName &&
+						(this._config.separateRelationFields
+							? true
+							: model.name !== field.type),
 				)
 				.map((v) => v.type),
 		)
