@@ -19,6 +19,7 @@
 	},
 	"scripts": {
 		"build": "tsc --skipLibCheck",
+		"prepublishOnly": "npm run build",
 		"format": "prettier --write \"src/**/*.ts\"",
 		"dev": "node -r ts-node/register src/index.ts",
 		"generate:postgresql": "prisma generate --schema prisma/postgresql.prisma",
